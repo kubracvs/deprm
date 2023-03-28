@@ -35,12 +35,13 @@ const ListItems = () => {
       .catch((err) => console.log(err));
   }, [veri,tarih]);
   const listem = veri.map((item) => (
+
     <tr className="text-white">
       <th scope="row" className="text-white">
-        {item === undefined ? "item bekleniyor" : "#" }
+        {item === undefined ? "item bekleniyor" : " " }
       </th>
       <th scope="row" className="text-white">
-        {item === undefined ? "item bekleniyor" : item.date}
+        {item === undefined ? "item bekleniyor" : item.date }
       </th>
       <th scope="row" className="text-white">
         {item === undefined ? "item bekleniyor" : item.time}
@@ -70,7 +71,7 @@ const ListItems = () => {
               className="form-control"
               onChange={(e) => setTarih(e.target.value)}
             />
-            <table className="table table-striped text-white">
+            <table className="table table-striped text-white table-hover">
               <thead>
                 <tr>
                   <th scope="col">#</th>
